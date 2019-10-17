@@ -80,18 +80,18 @@
       color="blue darken-3"
       dark
     >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title
         style="width: 300px"
         class="ml-0 pl-4"
       >
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <span class="hidden-sm-and-down">Google Contacts</span>
       </v-toolbar-title>
       <v-text-field
         flat
         solo-inverted
         hide-details
-        prepend-inner-icon="mdi-file-document-box-search"
+        prepend-inner-icon="mdi-magnify"
         label="Search"
         class="hidden-sm-and-down"
       ></v-text-field>
@@ -253,7 +253,7 @@ export default {
         "mdi-icon-alt": "mdi-chevron-down",
         text: "Labels",
         model: true,
-        children: [{ icon: "mdi-add", text: "Create label" }]
+        children: [{ icon: "mdi-plus", text: "Create label" }]
       },
       {
         icon: "mdi-chevron-up",
@@ -271,7 +271,7 @@ export default {
       { icon: "mdi-settings", text: "Settings" },
       { icon: "mdi-comment-quote-outline", text: "Send feedback" },
       { icon: "mdi-help", text: "Help" },
-      { icon: "mdi-download-multiple", text: "App downloads" },
+      { icon: "mdi-cellphone-link", text: "App downloads" },
       { icon: "mdi-keyboard", text: "Go to the old version" }
     ]
   })
